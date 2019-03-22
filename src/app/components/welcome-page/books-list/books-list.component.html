@@ -1,0 +1,13 @@
+<div class="container">
+    <mat-spinner class="spinner" *ngIf='!books'></mat-spinner>
+    <ul *ngIf='books'>
+        <li *ngFor='let book of books.data'>
+            <h3>{{book.title}}</h3>
+            <p>{{book.author}}</p>
+            <p>{{book.description}}</p>
+            <p>{{book.genre}}</p>
+            <p *ngIf="book.average_rating">{{book.average_rating}}</p>
+            <p *ngIf="!book.average_rating">Pas encore de note</p>
+        </li>
+    </ul>
+</div>

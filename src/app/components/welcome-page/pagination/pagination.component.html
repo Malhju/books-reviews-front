@@ -1,0 +1,23 @@
+<mat-toolbar *ngIf='books'>
+    <span class="spacer"></span>
+    <a mat-button
+        *ngIf='!books.links.prev'>
+        <mat-icon style="color:white">navigate_before</mat-icon>
+    </a>
+    <a mat-button
+        *ngIf='books.links.prev'
+        (click)='handleClick(books.links.prev)'>
+        <mat-icon>navigate_before</mat-icon>
+    </a>
+    <p>{{books.meta.current_page}}/{{books.meta.last_page}}</p>
+    <a mat-button
+        *ngIf='books.links.next'
+        (click)='handleClick(books.links.next)'>
+        <mat-icon>navigate_next</mat-icon>
+    </a>
+    <a mat-button
+    *ngIf='!books.links.next'>
+    <mat-icon style="color:white">navigate_next</mat-icon>
+    </a>
+    <span class="spacer"></span>
+</mat-toolbar>

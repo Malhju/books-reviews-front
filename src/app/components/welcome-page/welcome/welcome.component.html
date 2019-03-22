@@ -1,0 +1,4 @@
+<div class="welcome-cont">
+    <app-books-list [books]='books'></app-books-list>
+    <app-pagination (url)="getPageSection($event)" [books]='books'></app-pagination>
+</div>
